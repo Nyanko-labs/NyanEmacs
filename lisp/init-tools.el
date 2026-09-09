@@ -1,4 +1,4 @@
-;;; init-tools.el --- git, explorer, terminal, todo, AI  -*- lexical-binding: t -*-
+;;; init-tools.el --- git, explorer, terminal, todo  -*- lexical-binding: t -*-
 ;;; Code:
 
 ;; lazygit + gitsigns + diffview → magit + diff-hl.
@@ -39,14 +39,6 @@
 
 ;; todo-comments → hl-todo.
 (use-package hl-todo :hook (after-init . global-hl-todo-mode))
-
-;; gen.nvim (ollama) → gptel. `M-x gptel-menu' to switch backend/model.
-(use-package gptel
-  :custom (gptel-default-mode 'org-mode)
-  :config
-  (setq gptel-backend (gptel-make-ollama "Ollama" :host "localhost:11434" :stream t
-                        :models '(llama3.1 qwen2.5-coder))
-        gptel-model 'qwen2.5-coder))
 
 (provide 'init-tools)
 ;;; init-tools.el ends here

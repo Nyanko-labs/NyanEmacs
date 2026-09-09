@@ -54,8 +54,13 @@
   :hook (after-init . which-key-mode)
   :custom (which-key-idle-delay 0.3) (which-key-separator " → "))
 
-;; nvim-colorizer → rainbow-mode.
+;; nvim-colorizer → rainbow-mode; Centaur: rainbow-delimiters, evil-goggles (TextYankPost flash).
 (use-package rainbow-mode :hook (prog-mode css-mode))
+(use-package rainbow-delimiters :hook (prog-mode . rainbow-delimiters-mode))
+(use-package evil-goggles
+  :after evil
+  :hook (after-init . evil-goggles-mode)
+  :custom (evil-goggles-duration 0.15))
 
 ;; dashboard-nvim → dashboard.el, same banner and keys (f r p m c q; g is evil's prefix).
 (use-package dashboard

@@ -20,6 +20,7 @@
 (require 'init-completion)  ; vertico/consult (telescope) + corfu (cmp)
 (require 'init-lsp)         ; eglot + tree-sitter + format-on-demand
 (require 'init-tools)       ; magit, treemacs, terminal, todo
+(require 'init-ai)          ; Claude Code in a side window + ollama via gptel
 (require 'nyanemacs)        ; M-x nyan-* commands + cowboy discipline
 
 ;; custom.el: what Customize writes. user.el: your overrides. Both git-ignored.

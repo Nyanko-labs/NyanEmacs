@@ -62,6 +62,7 @@
   (recentf-exclude '("/tmp/" "/ssh:" "\\.elc$" "/elpa/")))
 
 (electric-pair-mode 1)              ; nvim-autopairs
+(use-package ws-butler :hook (prog-mode text-mode)) ; trim whitespace on lines you edited
 (delete-selection-mode 1)
 (global-subword-mode 1)
 

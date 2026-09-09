@@ -16,7 +16,8 @@ file, ~600 lines of Elisp, readable in one sitting.
 | lazygit / gitsigns | magit / diff-hl |
 | toggleterm | eat (`<leader>tt`) |
 | dashboard-nvim | dashboard.el, same banner |
-| gen.nvim (ollama) | gptel (`<leader>ag`) |
+| claudecode.nvim | claude-code.el (`<leader>a`) |
+| gen.nvim (ollama) | gptel (`<leader>o`) |
 | nightcity.nvim "mix" | `themes/nightcity-mix-theme.el` |
 | `:Nyan*` | `M-x nyan-{health,update,config,theme}` and `<leader>n…` |
 | "Hold it Cowboy!" | ported |
@@ -34,10 +35,18 @@ First launch installs every package from MELPA (about a minute). Then
 
 ## Keys
 
-`<space>` is the leader; press it and wait for which-key. The map is
-`lisp/init-evil.el` and follows NyanVim's `keymaps.lua` one to one:
-`<leader>ff` find, `fg` grep, `e` explorer, `gg` magit, `tt` terminal,
-`ca` code action, `cf` format, `rn` rename, `th` theme, `nh` health.
+`<space>` is the leader. One key for what you do all day, two keys for the
+rest; press `<space>` and wait, which-key shows everything.
+
+| Key | Does |
+|---|---|
+| `SPC SPC` · `SPC /` · `SPC ,` · `SPC .` | find file · grep project · buffers · recent |
+| `SPC e` · `SPC g` · `SPC t` | explorer · magit · terminal |
+| `SPC a` | Claude: `c` start `t` toggle `s` send `r` send region `e` fix error `/` slash `m` menu |
+| `SPC c` | code: `a` action `f` format `r` rename `d` diagnostics `s` symbols |
+| `SPC w` · `SPC q` · `SPC d` · `SPC p` | save · quit window · delete buffer · switch project |
+| `SPC n` | nyan: `h` health `u` update `c` user.el `t` theme `p` packages |
+| `gd` `gr` `gi` `K` `gc` `H` `L` `C-h/j/k/l` | Vim as usual |
 
 ## Make it yours
 
